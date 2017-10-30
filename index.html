@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Metadata-->
+    <title>HungryCosmos - RealtimeTime demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width, user-scalable=no, shrink-to-fit=no">
+    <meta name="description" content="HungryCosmos - Bekzhan Baikatov is Almaty based Java / Node developer and designer" />
+    <meta name="keywords" content="HungryCosmos, Bekzhan Baikatov, java developer, node developer, fullstack developer, developer, programmer, designer"/>
+
+    <!--Dependencies-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit:500" />
+    <link rel="stylesheet" type="text/css" href="res/css/mixed.css" />
+
+    <!--Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/res/ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/res/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/res/ico/favicon-16x16.png">
+    <link rel="manifest" href="/res/ico/manifest.json">
+    <link rel="mask-icon" href="/res/ico/safari-pinned-tab.svg" color="#11010d">
+    <link rel="shortcut icon" href="/res/ico/favicon.ico">
+    <meta name="msapplication-config" content="/res/ico/browserconfig.xml">
+    <meta name="theme-color" content="#11010d">
+</head>
+<body>
+    <!--content-->
+    <div id="content">
+        <div id="centered-cell">
+            <span id="clock"></span>
+        </div>
+    </div>
+
+    <!--loading latest eztz-->
+    <script src="https://unpkg.com/eztz@1.1.2/dist/umd/eztz.min.js"></script>
+
+    <!--loading this library-->
+    <script src="dist/umd/real-time-time.js"></script>
+
+    <!--initialization-->
+    <script>
+        // First, we need to get reference to the element we will print time to, null is for console
+        var clock = document.getElementById('clock');
+
+        // Take a look at all possible options. You can change what you want right here, but we will skip it for now.
+        var DEFAULTS = {
+            domElement: null,
+            remoteTimezoneOffsetHours: 0,
+            intervalDelayMillis: 500,
+            timeDisplayFormat: "It's {time} there{diff}",
+            timeFormat: {
+                locales: "en-US",
+                options: {
+                    month: "short",
+                    day: "numeric",
+                    hour: "numeric",
+                    minute:"numeric",
+                    hour12: true
+                }
+            },
+            diffFormat: {
+                wrapper: " ({diffTxt})",
+                noDiffTxt: "my timezone PogChamp",
+                diffTxt: "{h}h {course} btw",
+                course: {
+                    ahead: "ahead",
+                    behind: "behind"
+                }
+            }
+        };
+
+        // These must be configured to make the library actually useful
+        DEFAULTS.domElement = document.getElementById('clock');
+        DEFAULTS.remoteTimezoneOffsetHours = +6;
+
+        // This is optional, in case we want to see current seconds
+        DEFAULTS.timeFormat.options.second = "numeric";
+
+        // Remember only to keep template words and curly brackets surrounding it
+        DEFAULTS.timeDisplayFormat = "It's {time} there{diff}";
+
+        // eg if you delete {diff}, you will lose additional very useful time difference data
+        DEFAULTS.timeDisplayFormat = "Boring time: {time}";
+
+        // We can pack our custom config into separate object
+        var config = {
+            domElement: document.getElementById('clock'),
+            remoteTimezoneOffsetHours: +6,
+            timeFormat: {
+                options: {
+                    second:"numeric"
+                }
+            }
+        };
+
+        // And it will overwrite defaults. Note, RealtimeTime.init(DEFAULTS); will work as well
+        RealtimeTime.init(config);
+
+        // You can always stop it
+        RealtimeTime.destroy();
+
+        // And restart
+        RealtimeTime.start();
+
+        // This lib uses .toLocaleString() to format time
+        // More reading on timeFormat, locales and options below:
+        // developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString#Using_options
+    </script>
+</body>
+</html>
