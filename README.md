@@ -15,9 +15,13 @@ It _does not work_ without loaded [eztz](https://github.com/HungryCosmos/eztz) a
 ## Quick Start
 
 1. Load latest [eztz](https://github.com/HungryCosmos/eztz) as described in 
-[these instructions](https://github.com/HungryCosmos/eztz#installation)
-2. Download packaged [real-time-time.min.js](/dist/umd/real-time-time.min.js) or other distribution [repo](/dist) and 
-load it with `<script src="path/to.js"></script>` from local files, or use [rawgit]() at your own risk:
+[these instructions](https://github.com/HungryCosmos/eztz#installation), or just use [npmjs](https://unpkg.com/) and 
+snippet below:  
+   ```html
+   <script src="https://unpkg.com/eztz@1.1.2/dist/umd/eztz.min.js"></script>
+   ```
+2. Download packaged [real-time-time.min.js](/dist/umd/real-time-time.min.js) (or other distribution from [repo](/dist))
+and load it with from local files, or use [rawgit](https://rawgit.com) at your own risk:  
    ```html
    <script src="https://cdn.rawgit.com/HungryCosmos/real-time-time/v1.0.4/dist/umd/real-time-time.min.js"></script>
    ```
