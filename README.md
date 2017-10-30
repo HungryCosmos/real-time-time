@@ -1,4 +1,4 @@
-# real-time-time
+# real-time-time [![Working Demo](https://img.shields.io/badge/demo-running-brightgreen.svg)](https://hungrycosmos.github.io/real-time-time) [![Rawgit](https://img.shields.io/badge/rawgit-v1.0.1-orange.svg)](https://cdn.rawgit.com/HungryCosmos/real-time-time/v1.0.1/dist/umd/real-time-time.min.js)
 
 > Periodically writes current time (and date) of a time zone into configured DOM element.
 
@@ -72,7 +72,7 @@ load it with `<script src="path/to.js"></script>` from local files, or use [rawg
            };
    
            // These must be configured to make the library actually useful
-           DEFAULTS.domElement = document.getElementById('clock');
+           DEFAULTS.domElement = clock;
            DEFAULTS.remoteTimezoneOffsetHours = +6;
    
            // This is optional, in case we want to see current seconds
@@ -86,7 +86,7 @@ load it with `<script src="path/to.js"></script>` from local files, or use [rawg
    
            // We can pack our custom config into separate object
            var config = {
-               domElement: document.getElementById('clock'),
+               domElement: clock,
                remoteTimezoneOffsetHours: +6,
                timeFormat: {
                    options: {
