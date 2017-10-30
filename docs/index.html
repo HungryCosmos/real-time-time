@@ -69,7 +69,7 @@
         };
 
         // These must be configured to make the library actually useful
-        DEFAULTS.domElement = document.getElementById('clock');
+        DEFAULTS.domElement = clock;
         DEFAULTS.remoteTimezoneOffsetHours = +6;
 
         // This is optional, in case we want to see current seconds
@@ -83,7 +83,7 @@
 
         // We can pack our custom config into separate object
         var config = {
-            domElement: document.getElementById('clock'),
+            domElement: clock,
             remoteTimezoneOffsetHours: +6,
             timeFormat: {
                 options: {
