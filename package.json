@@ -1,6 +1,6 @@
 {
   "name": "real-time-time",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Periodically writes current time (and date) of a time zone into configured DOM element.",
   "main": "dist/real-time-time.min.js",
   "scripts": {
