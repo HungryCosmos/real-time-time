@@ -1,4 +1,4 @@
-# real-time-time [![Working Demo](https://img.shields.io/badge/demo-running-brightgreen.svg)](https://hungrycosmos.github.io/real-time-time) [![Rawgit](https://img.shields.io/badge/rawgit-v1.0.4-orange.svg)](https://cdn.rawgit.com/HungryCosmos/real-time-time/v1.0.4/dist/umd/real-time-time.min.js)
+# real-time-time [![Working Demo](https://img.shields.io/badge/demo-running-brightgreen.svg)](https://hungrycosmos.github.io/real-time-time) [![Rawgit](https://img.shields.io/badge/rawgit-v1.0.5-orange.svg)](https://cdn.rawgit.com/HungryCosmos/real-time-time/v1.0.5/dist/umd/real-time-time.min.js)
 
 > Periodically writes current time (and date) of a time zone into configured DOM element.
 
@@ -23,9 +23,9 @@ snippet below:
 2. Download packaged [real-time-time.min.js](/dist/umd/real-time-time.min.js) (or other distribution from [repo](/dist))
 and load it with from local files, or use [rawgit](https://rawgit.com) at your own risk:  
    ```html
-   <script src="https://cdn.rawgit.com/HungryCosmos/real-time-time/v1.0.4/dist/umd/real-time-time.min.js"></script>
+   <script src="https://cdn.rawgit.com/HungryCosmos/real-time-time/v1.0.5/dist/umd/real-time-time.min.js"></script>
    ```
-3. Initialize `RealtimeTime` with required params in javascript:
+3. Initialize `RealtimeTime` with required params in javascript:  
    ```html
    <!DOCTYPE html>
    <html lang="en">
@@ -40,7 +40,7 @@ and load it with from local files, or use [rawgit](https://rawgit.com) at your o
        <script src="https://unpkg.com/eztz@1.1.2/dist/umd/eztz.min.js"></script>
     
        <!--loading this library-->
-       <script src="https://cdn.rawgit.com/HungryCosmos/real-time-time/v1.0.4/dist/umd/real-time-time.min.js"></script>
+       <script src="https://cdn.rawgit.com/HungryCosmos/real-time-time/v1.0.5/dist/umd/real-time-time.min.js"></script>
  
  
        <!--initialization, see more on configurations below-->
