@@ -76,15 +76,16 @@
         DEFAULTS.timeFormat.options.second = "numeric";
 
         // Remember only to keep template words and curly brackets surrounding it
-        DEFAULTS.timeDisplayFormat = "It's {time} there{diff}";
+        timeDisplayFormat = "It's {time} there{diff}";
 
         // eg if you delete {diff}, you will lose additional very useful time difference data
-        DEFAULTS.timeDisplayFormat = "Boring time: {time}";
+        DEFAULTS.timeDisplayFormat = "Boring time output: {time}";
 
         // We can pack our custom config into separate object
         var config = {
             domElement: clock,
             remoteTimezoneOffsetHours: +6,
+            timeDisplayFormat: "It's {time} in <a href='https://hungrycosmos.com'>Almaty</a>{diff}",
             timeFormat: {
                 options: {
                     second:"numeric"
