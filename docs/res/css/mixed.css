@@ -10,6 +10,15 @@
     font-family: Kanit, Helvetica, sans-serif;
     font-size: 28px;
     font-weight: 500;
+    color: #525252;
+}
+
+a {
+    color: #000000;
+}
+
+a:active, a:hover, a:focus {
+    color: #b71c1c;
 }
 
 #centered-cell {
